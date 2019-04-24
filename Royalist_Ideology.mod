@@ -3,4 +3,4 @@ path="mod/Royalist_Ideology/""
 tags={
 	"Alternate History"
 }
-supported_version="1.0.1"
+supported_version="1.6.2"
