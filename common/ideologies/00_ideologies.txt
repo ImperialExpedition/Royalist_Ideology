@@ -164,6 +164,9 @@ ideologies = {
 			
 			absolution  = {
 			}
+			
+			regency  = {
+			}
 		}
 
 		dynamic_faction_names = {

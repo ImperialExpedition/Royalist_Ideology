@@ -17,6 +17,8 @@
  absolution_desc:0 "Absolutism considers the Monarchs Powers to be god given, and thus the Monarch shall have absolute Power."
  constitutional:0 "Constitutionalism"
  constitutional_desc:0 "The Monarch's Powers are limited by a Constitution."
+ regency:0 "Regency"
+ regency_desc:0 "A Regency is put in place when either no Monarch is yet found or the to-be Monarch hasnt reached the required age to assume the Throne yet."
  liberalism:0 "Liberalism"
  liberalism_desc:0 "With a long philosophical tradition of valuing personal liberty, liberalism views safeguarding these rights as the primary function of the state."
  socialism:0 "Socialism"
