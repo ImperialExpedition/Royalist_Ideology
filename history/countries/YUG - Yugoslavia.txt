@@ -231,7 +231,7 @@ set_politics = {
 			}
 		}
 		
-		ruling_party = neutrality
+		ruling_party = royalist
 		last_election = "1938.12.1"
 		election_frequency = 36
 		elections_allowed = yes
@@ -243,7 +243,7 @@ set_stability = 0.6
 create_country_leader = {
 	name = "Prince Paul"
 	desc = "POLITICS_PRINCE_PAUL_DESC"
-	picture = "Portrait_YUG_Prince_Pavel.dds"
+	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
 	expire = "1965.1.1"
 	ideology = regency
 	traits = {
