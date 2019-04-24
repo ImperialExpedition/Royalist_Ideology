@@ -22,6 +22,7 @@ ideas = {
 			}
 			modifier = {
 				conscription = -0.003
+				war_support_factor = -0.05
 			}
 		}
 
@@ -42,7 +43,8 @@ ideas = {
 			
 			modifier = {
 				political_power_cost = 0.8
-				unity_factor = -0.10
+				stability_factor = -0.10
+				surrender_limit = -0.5
 			}
 		}
 
@@ -159,7 +161,7 @@ ideas = {
 							has_government = fascism
 							AND = {
 								NOT = { has_government = communism }
-								any_country = {
+								any_other_country = {
 									original_tag = FRA
 									has_government = communism
 								}
@@ -231,7 +233,7 @@ ideas = {
 				}
 
 				modifier = {
-					unity_weekly = 0.002
+					stability_weekly = 0.002					
 				}
 		}		
 		FRA_support_the_right_focus = {
@@ -245,7 +247,7 @@ ideas = {
 							has_government = communism
 							AND = {
 								NOT = { has_government = fascism }
-								any_country = {
+								any_other_country = {
 									original_tag = FRA
 									has_government = fascism
 								}
@@ -304,8 +306,10 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.9
-				unity_factor = -0.1
+				industrial_capacity_factory = -0.9
+				industrial_capacity_dockyard = -0.9
+				stability_factor = -0.1
+				war_support_factor = -0.1
 			}
 		}
 
@@ -322,7 +326,8 @@ ideas = {
 			}
 
 			modifier = {
-				industrial_capacity_factory =  -0.3
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
 			}
 		}
 
@@ -355,14 +360,14 @@ ideas = {
 			}			
 			available = {
 				has_completed_focus = FRA_leftist_rhetoric
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 			traits = { communist_revolutionary }
-	
-			on_add = {
-				country_event = political.1
-			}
-	
+
 			do_effect = {
 				NOT = {
 					has_government = communism
@@ -381,14 +386,15 @@ ideas = {
 				original_tag = "FRA"
 			}
 			
-
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
 			
 			traits = { democratic_reformer }
-	
-			on_add = {
-				country_event = political.13
-			}
-	
+
 			do_effect = {
 				NOT = {
 					has_government = democratic
@@ -408,14 +414,14 @@ ideas = {
 			}
 			available ={
 				has_completed_focus = FRA_right_wing_rhetoric
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 			traits = { fascist_demagogue }
-	
-			on_add = {
-				country_event = political.7
-			}
-	
+
 			do_effect = {
 				NOT = {
 					has_government = fascism
@@ -433,7 +439,7 @@ ideas = {
 				original_tag = "FRA"
 			}
 			
-			picture = generic_political_advisor_europe_3
+			picture = generic_political_advisor_europe_5
 			
 			traits = { silent_workhorse }
 	
@@ -490,7 +496,7 @@ ideas = {
 				original_tag = "FRA"
 			}
 			
-			picture = generic_army_europe_3
+			picture = generic_army_europe_5
 			
 			traits = { war_industrialist }
 	
@@ -923,7 +929,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 
@@ -943,7 +949,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 
@@ -962,7 +968,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 			}
 			
 			traits = { motorized_equipment_manufacturer }
@@ -976,7 +982,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -989,7 +995,7 @@ ideas = {
 			}		
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -1007,7 +1013,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1020,7 +1026,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1033,7 +1039,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -1046,7 +1052,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -1064,7 +1070,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { naval_manufacturer }
@@ -1080,7 +1086,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -1098,10 +1104,21 @@ ideas = {
 			cost = 250
 						
 			research_bonus = {
-				cat_grand_battle_plan = 0.10
+				cat_grand_battle_plan = 0.15
 			}
 			
 			traits = { grand_battle_plan_expert }
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+
+					GER = { is_ai = yes }
+					date < 1939.1.1
+				}
+			}
+
 		}
 		
 		henri_giraud = {
@@ -1111,7 +1128,17 @@ ideas = {
 			}
 						
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+
+					GER = { is_ai = yes }
+					date < 1939.1.1
+				}
 			}
 			
 			traits = { military_theorist }
@@ -1127,7 +1154,7 @@ ideas = {
 			cost = 250
 						
 			research_bonus = {
-				cat_fleet_in_being = 0.10
+				cat_fleet_in_being = 0.15
 			}
 			
 			traits = { grand_fleet_proponent }
@@ -1142,7 +1169,7 @@ ideas = {
 			
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -1158,7 +1185,7 @@ ideas = {
 			cost = 250 
 			
 			research_bonus = {
-				cat_operational_integrity = 0.10
+				cat_operational_integrity = 0.15
 			}
 			
 			traits = { assault_avaition }
@@ -1171,7 +1198,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -1186,7 +1213,7 @@ ideas = {
 			
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }

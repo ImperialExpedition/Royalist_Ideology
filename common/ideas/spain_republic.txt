@@ -26,6 +26,25 @@ ideas = {
 			traits = { captain_of_industry }
 		}
 
+		SPR_dolores_ibarruri = {
+
+			picture = dolores_ibarruri
+				
+			allowed = {
+				original_tag = SPR				
+				NOT = { has_government = fascism }
+			}
+			
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
+			
+			traits = { communist_revolutionary }
+		}
+
 		SPR_diego_martinez_barrio = {
 
 			picture = generic_navy_europe_1
@@ -55,7 +74,7 @@ ideas = {
 			picture = generic_army_europe_3
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -72,7 +91,7 @@ ideas = {
 			picture = generic_navy_europe_1
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -83,7 +102,7 @@ ideas = {
 
 		SPR_carlos_masquelet_lacaci = {
 			
-			picture = generic_army_europe_2
+			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = SPR
@@ -102,7 +121,7 @@ ideas = {
 		
 		SPR_vincente_rojo_lluch = {
 			
-			picture = generic_army_europe_3
+			picture = generic_army_europe_5
 			
 			allowed = {
 				original_tag = SPR
@@ -120,7 +139,7 @@ ideas = {
 
 		SPR_fransisco_franco = {
 			
-			picture = generic_army_europe_1
+			picture = francisco_franco
 			
 			allowed = {
 				original_tag = SPR
@@ -134,7 +153,7 @@ ideas = {
 						AND = {
 							NOT = { has_government = communism }
 							NOT = {
-								any_country = {
+								any_other_country = {
 									NOT = {
 										tag = ROOT
 									}
@@ -324,7 +343,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -353,7 +372,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }

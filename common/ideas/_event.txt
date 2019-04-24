@@ -10,7 +10,7 @@ ideas = {
 			picture = generic_fascism_drift_bonus
 			
 			modifier = {
-				unity_factor = -0.05
+				stability_factor = -0.05
 				conscription = 0.002
 				fascism_drift = 0.05
 			}
@@ -67,7 +67,7 @@ ideas = {
 			picture = generic_fascism_drift_bonus
 			
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 
@@ -82,7 +82,7 @@ ideas = {
 			picture = generic_communism_drift_bonus
 			
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 
@@ -97,11 +97,11 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				unity_factor = -0.1
+				stability_factor = -0.1
 			}
 		}
 
-		royalist_revolutionaries = {
+        	royalist_revolutionaries = {
 			
 			removal_cost = -1
 			
@@ -115,8 +115,7 @@ ideas = {
 				unity_factor = -0.1
 			}
 		}
-
-
+		
 		fascism_defeated = {
 			removal_cost = -1
 			
@@ -127,7 +126,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				unity_factor = 0.1
+				stability_factor = 0.1
 			}
 		}
 
@@ -141,7 +140,7 @@ ideas = {
 			picture = generic_democratic_drift_bonus
 			
 			modifier = {
-				unity_factor = 0.1
+				stability_factor = 0.1
 			}
 		}
 		
@@ -155,13 +154,18 @@ ideas = {
 			picture = generic_intel_bonus
 			
 			modifier = {
-				political_power_factor = 0.1
+				political_power_factor = 0.2
+				stability_weekly = 0.005
 			}
 		}
 
 		anti_soviet_pact = {
 			
 			removal_cost = -1 # Or make removable, with high cost?
+
+			available = {
+				is_subject = no
+			}
 			
 			allowed = {
 				always = no # Triggered via event
@@ -170,6 +174,8 @@ ideas = {
 			ai_will_do = {
 				factor = 0
 			}
+
+			picture = anti_soviet_pact
 		}
 
 		anti_soviet_pact_refused_call = {
@@ -187,7 +193,7 @@ ideas = {
 			}
 
 			modifier = {
-				unity_factor = -0.07
+				stability_factor = -0.1
 				communism_drift = 0.05
 			}
 		}
@@ -203,6 +209,35 @@ ideas = {
 			
 			modifier = {
 				fascism_acceptance = -50
+			}
+		}
+		
+		shattered_government = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			picture = generic_democratic_drift_bonus
+			
+			modifier = {
+				stability_factor = -0.1
+			}
+		}
+		
+		political_turmoil = {
+			
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			picture = FRA_scw_intervention_republicans_focus
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
 			}
 		}
 	}

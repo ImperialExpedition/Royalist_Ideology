@@ -39,7 +39,7 @@ ideas = {
 		
 		LUX_emile_speller = {
 			
-			picture = generic_army_europe_1
+			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = LUX
@@ -52,7 +52,7 @@ ideas = {
 			}
 		}
 		
-		LUX_alexander_von_falkenhausen = {
+		LUX_alexander_von_falkenhausen = { # Turned into generic guy because Luxemburg only had one commander RIP
 			
 			picture = generic_army_europe_2
 			
@@ -209,7 +209,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -224,7 +224,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -239,7 +239,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }

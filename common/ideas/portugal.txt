@@ -47,7 +47,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -62,7 +62,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -77,7 +77,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -126,7 +126,7 @@ ideas = {
 
 		POR_lobato_guerra = {
 			
-			picture = generic_army_europe_2
+			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = POR
@@ -267,7 +267,7 @@ ideas = {
 
 		POR_jose_filipe_rodrigues_de_barros = {
 
-			picture = generic_army_europe_3
+			picture = generic_army_europe_5
 			
 			allowed = {
 				original_tag = POR
@@ -324,7 +324,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			equipment_bonus = {
@@ -352,7 +352,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			equipment_bonus = {

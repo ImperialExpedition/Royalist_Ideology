@@ -157,7 +157,7 @@ ideas = {
 
 		BUL_blagoi_ivanov = {
 
-			picture = generic_army_europe_1
+			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = BUL
@@ -187,7 +187,7 @@ ideas = {
 
 		BUL_atanas_pavlov_zhilkov = {
 
-			picture = generic_army_europe_3
+			picture = generic_army_europe_5
 			
 			allowed = {
 				original_tag = BUL
@@ -214,7 +214,7 @@ ideas = {
 			}
 						
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -238,7 +238,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -253,7 +253,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -268,7 +268,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }

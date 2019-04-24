@@ -160,7 +160,7 @@ ideas = {
 
 		DEN_hans_a_rolsted = {
 			
-			picture = generic_army_europe_3
+			picture = generic_army_europe_4
 
 			allowed = {
 				original_tag = DEN
@@ -175,7 +175,7 @@ ideas = {
 		
 		DEN_christian_frederik_von_schalburg = {
 
-			picture = generic_army_europe_2
+			picture = generic_army_europe_5
 			
 			allowed = {
 				original_tag = DEN
@@ -229,7 +229,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -244,7 +244,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -267,7 +267,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -294,7 +294,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { naval_manufacturer }
@@ -315,7 +315,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			# rifles

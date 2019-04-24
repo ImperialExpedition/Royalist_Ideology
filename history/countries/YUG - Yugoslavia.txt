@@ -198,12 +198,12 @@ set_politics = {
 			#banned = no #default is no
 		}
 		
-		neutrality = { 
+		royalist = { 
 			popularity = 60
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = royalist
 	last_election = "1935.5.3"
 	election_frequency = 36
 	elections_allowed = yes
@@ -245,7 +245,7 @@ create_country_leader = {
 	desc = "POLITICS_PRINCE_PAUL_DESC"
 	picture = "Portrait_Yugoslavia_Prince_Paul.dds"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = constitutional
 	traits = {
 		#
 	}

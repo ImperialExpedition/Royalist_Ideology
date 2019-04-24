@@ -90,7 +90,7 @@ ideas = {
 			
 			modifier = {
 				subversive_activites_upkeep = -0.5
-				land_reinforce_rate = 0.3
+				land_reinforce_rate = 0.05
 			}
 		}
 		
@@ -127,7 +127,7 @@ ideas = {
 			picture = generic_research_bonus
 			
 			modifier = {
-				research_time_factor = -0.05
+				research_speed_factor = 0.10
 			}
 		}
 
@@ -199,7 +199,6 @@ ideas = {
 			
 			modifier = {
 				drift_defence_factor = 0.5
-				production_speed_buildings_factor = -0.1
 			}
 			rule = {
 				can_create_factions = yes
@@ -218,7 +217,7 @@ ideas = {
 			}
 			
 			modifier = {
-				unity_factor = -0.2
+				stability_factor = -0.2
 			}
 		}
 		
@@ -234,7 +233,7 @@ ideas = {
 			}
 			
 			modifier = {
-				unity_factor = -0.05
+				stability_factor = -0.05
 			}
 		}
 
@@ -257,6 +256,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.5
+				send_volunteer_factor = -0.8
+				industrial_capacity_factory = -0.2
+				training_time_factor = 0.5
 			}
 		}
 
@@ -281,6 +283,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.45
+				send_volunteer_factor = -0.74
+				industrial_capacity_factory = -0.18
+				training_time_factor = 0.45
 			}
 		}
 		officers_purged_3 = {
@@ -299,11 +304,14 @@ ideas = {
 			research_bonus = {
 				land_doctrine = -0.08
 				naval_doctrine = -0.08
-				air_doctrine = -0.08
+				air_doctrine = -0.08				
 			}
 
 			modifier = {
 				army_org_factor = -0.4
+				send_volunteer_factor = -0.68
+				industrial_capacity_factory = -0.16
+				training_time_factor = 0.4
 			}
 		}
 		officers_purged_4 = {
@@ -322,11 +330,14 @@ ideas = {
 			research_bonus = {
 				land_doctrine = -0.07
 				naval_doctrine = -0.07
-				air_doctrine = -0.07
+				air_doctrine = -0.07				
 			}
 
 			modifier = {
 				army_org_factor = -0.35
+				send_volunteer_factor = -0.62
+				industrial_capacity_factory = -0.14
+				training_time_factor = 0.35
 			}
 		}
 		officers_purged_5 = {
@@ -350,6 +361,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.30
+				send_volunteer_factor = -0.56
+				industrial_capacity_factory = -0.12
+				training_time_factor = 0.3
 			}
 		}
 		officers_purged_6 = {
@@ -373,6 +387,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.25
+				send_volunteer_factor = -0.5
+				industrial_capacity_factory = -0.10
+				training_time_factor = 0.25
 			}
 		}
 		officers_purged_7 = {
@@ -396,6 +413,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.20
+				send_volunteer_factor = -0.44
+				industrial_capacity_factory = -0.08
+				training_time_factor = 0.2
 			}
 		}
 		officers_purged_8 = {
@@ -419,6 +439,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.15
+				send_volunteer_factor = -0.38
+				industrial_capacity_factory = -0.06
+				training_time_factor = 0.15
 			}
 		}
 		officers_purged_9 = {
@@ -442,6 +465,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.10
+				send_volunteer_factor = -0.32
+				industrial_capacity_factory = -0.04
+				training_time_factor = 0.1
 			}
 		}
 		officers_purged_10 = {
@@ -465,6 +491,9 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.05
+				send_volunteer_factor = -0.26
+				industrial_capacity_factory = -0.02
+				training_time_factor = 0.05
 			}
 		}
 
@@ -489,6 +518,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = 0.45
+				war_support_factor = 0.2
 			}
 		}
 
@@ -513,6 +543,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = 0.35
+				war_support_factor = 0.15
 			}
 		}
 
@@ -537,6 +568,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = 0.25
+				war_support_factor = 0.1
 			}
 		}
 
@@ -561,6 +593,7 @@ ideas = {
 
 			modifier = {
 				army_org_factor = 0.15
+				war_support_factor = 0.05
 			}
 		}
 
@@ -618,7 +651,7 @@ ideas = {
 			}
 			
 			modifier = {
-				unity_factor = 0.2
+				stability_factor = 0.2
 			}
 
 		}
@@ -636,7 +669,6 @@ ideas = {
 			}
 
 		}
-
 	}
 
 
@@ -660,7 +692,7 @@ ideas = {
 
 		SOV_lavrentiy_beria = {
 			
-			picture = generic_army_europe_2
+			picture = generic_army_europe_4
 			
 			allowed = {
 				original_tag = SOV
@@ -731,15 +763,15 @@ ideas = {
 			{
 				NOT = { has_country_flag = purged_khrushchev }
 				NOT = { has_country_flag = counter_purge }
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 
 			
 			traits = { communist_revolutionary }
-	
-			on_add = {
-				country_event = political.1
-			}
 	
 			do_effect = {
 				NOT = {
@@ -759,14 +791,15 @@ ideas = {
 				original_tag = "SOV"
 			}
 			
-
+			available = {
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
+			}
 			
 			traits = { democratic_reformer }
-	
-			on_add = {
-				country_event = political.13
-			}
-	
+
 			do_effect = {
 				NOT = {
 					has_government = democratic
@@ -787,15 +820,15 @@ ideas = {
 			available = 
 			{
 				NOT = { has_country_flag = counter_purge }
+				if = {
+					limit = { has_dlc = "Man the Guns" }	
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 			
 
 			
 			traits = { fascist_demagogue }
-	
-			on_add = {
-				country_event = political.7
-			}
 	
 			do_effect = {
 				NOT = {
@@ -823,7 +856,7 @@ ideas = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 404
@@ -852,7 +885,7 @@ ideas = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 405
@@ -933,7 +966,7 @@ ideas = {
 			traits = { navy_chief_naval_aviation_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -955,7 +988,7 @@ ideas = {
 			traits = { navy_chief_commerce_raiding_1 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -977,7 +1010,7 @@ ideas = {
 			traits = { navy_chief_reform_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -998,7 +1031,7 @@ ideas = {
 			traits = { navy_chief_decisive_battle_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}	
 	}
@@ -1108,7 +1141,7 @@ ideas = {
 				custom_trigger_tooltip = {
 				tooltip = SOV_konev_civil_war
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 408
@@ -1139,7 +1172,7 @@ ideas = {
 				NOT = { has_country_flag = purge_2_group_b }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 407
@@ -1164,7 +1197,7 @@ ideas = {
 				original_tag = SOV # Unlocked via focus
 				hidden_trigger = {
 					NOT = {
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 403
@@ -1264,7 +1297,7 @@ ideas = {
 				NOT = { has_country_flag = purge_1_group_b }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 403
@@ -1278,7 +1311,7 @@ ideas = {
 			traits = { navy_submarine_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1294,7 +1327,7 @@ ideas = {
 				NOT = { has_country_flag = purge_2_group_a }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 406
@@ -1309,7 +1342,7 @@ ideas = {
 			traits = { navy_capital_ship_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}
 		
@@ -1325,7 +1358,7 @@ ideas = {
 				NOT = { has_country_flag = counter_purge }
 				hidden_trigger = {
 					NOT = { 
-						any_country = {
+						any_other_country = {
 							has_war_with = SOV
 							original_tag = SOV
 							has_unit_leader = 409
@@ -1339,7 +1372,7 @@ ideas = {
 			traits = { navy_amphibious_assault_2 }
 			
 			ai_will_do = {
-				factor = 1
+				factor = 0.2
 			}
 		}	
 	}
@@ -1352,13 +1385,35 @@ ideas = {
 			
 			
 			allowed = {
-				original_tag = SOV
+				OR = {
+					original_tag = SOV
+					AND = {
+						OR = {
+							is_literally_china = yes
+							tag = MAN
+						}
+						has_dlc = "Waking the Tiger"
+					}
+				}
+			}
+
+			available = {
+				if = {
+					limit = {
+						OR = {
+							is_literally_china = yes
+							tag = MAN
+						}
+					}
+					has_completed_focus = CHI_hire_soviet_designer
+					NOT = {
+						has_war_with = SOV
+					}
+				}
 			}
 			
-
-			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { fast_tank_manufacturer }
@@ -1377,7 +1432,7 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { medium_tank_manufacturer }
@@ -1396,7 +1451,7 @@ ideas = {
 
 			
 			research_bonus = {
-				armor = 0.10
+				armor = 0.15
 			}
 			
 			traits = { heavy_tank_manufacturer }
@@ -1420,7 +1475,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { light_aircraft_manufacturer }
@@ -1439,7 +1494,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { medium_aircraft_manufacturer }
@@ -1458,7 +1513,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { heavy_aircraft_manufacturer }
@@ -1477,7 +1532,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 			
 			traits = { naval_aircraft_manufacturer }
@@ -1500,7 +1555,7 @@ ideas = {
 
 			
 			research_bonus = {
-				industry = 0.10
+				industry = 0.15
 			}
 			
 			traits = { industrial_concern }
@@ -1519,7 +1574,7 @@ ideas = {
 
 			
 			research_bonus = {
-				electronics = 0.10
+				electronics = 0.15
 			}
 			
 			traits = { electronics_concern }
@@ -1543,7 +1598,7 @@ ideas = {
 
 			
 			research_bonus = {
-				artillery = 0.10
+				artillery = 0.15
 			}
 			
 			traits = { artillery_manufacturer }
@@ -1564,7 +1619,7 @@ ideas = {
 
 			
 			research_bonus = {
-				infantry_weapons = 0.10
+				infantry_weapons = 0.15
 			}
 			
 			traits = { infantry_equipment_manufacturer }
@@ -1583,7 +1638,7 @@ ideas = {
 
 			
 			research_bonus = {
-				motorized_equipment = 0.10
+				motorized_equipment = 0.15
 				mot_rockets = 0.50
 			}
 			
@@ -1608,7 +1663,7 @@ ideas = {
 
 			
 			research_bonus = {
-				naval_equipment = 0.10
+				naval_equipment = 0.15
 			}
 			
 			traits = { naval_manufacturer }
@@ -1636,7 +1691,7 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_mass_assault = 0.10
+				cat_mass_assault = 0.15
 			}
 			
 			# PURGED
@@ -1653,7 +1708,7 @@ ideas = {
 
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -1677,7 +1732,7 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_mass_assault = 0.10
+				cat_mass_assault = 0.15
 			}
 			
 			traits = { mass_assault_expert }
@@ -1698,7 +1753,7 @@ ideas = {
 			cost = 150
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -1714,7 +1769,7 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_fleet_in_being = 0.10
+				cat_fleet_in_being = 0.15
 			}
 			
 			traits = { grand_fleet_proponent}
@@ -1735,7 +1790,7 @@ ideas = {
 			cost = 250
 			
 			research_bonus = {
-				cat_battlefield_support = 0.10
+				cat_battlefield_support = 0.15
 			}
 			
 			traits = { close_air_support_proponent }
@@ -1751,7 +1806,7 @@ ideas = {
 
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -1767,7 +1822,7 @@ ideas = {
 
 			
 			research_bonus = {
-				nuclear = 0.10
+				nuclear = 0.15
 			}
 			
 			traits = { nuclear_scientist }
@@ -1781,7 +1836,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				rocketry = 0.10
+				rocketry = 0.15
 			}
 
 			

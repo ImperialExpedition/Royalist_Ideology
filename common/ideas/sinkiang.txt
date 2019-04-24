@@ -32,7 +32,7 @@ ideas = {
 				original_tag = SIK
 			}
 			
-			traits = { captain_of_industry }
+			traits = { war_industrialist }
 		}
 	}	
 
@@ -55,7 +55,7 @@ ideas = {
 
 		SIK_ma_wei = {
 			
-			picture = generic_army_asia_1
+			picture = generic_army_asia_4
 
 			allowed = {
 				original_tag = SIK
@@ -157,7 +157,7 @@ ideas = {
 		
 		SIK_mao_wu = {
 
-			picture = generic_army_asia_2
+			picture = generic_army_asia_5
 			
 			allowed = {
 				original_tag = SIK
@@ -213,7 +213,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -228,7 +228,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -243,7 +243,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }

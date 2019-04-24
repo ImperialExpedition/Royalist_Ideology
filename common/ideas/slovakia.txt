@@ -4,7 +4,7 @@ ideas = {
 
 		SLO_frano_kral = {
 
-			picture = generic_political_advisor_europe_1
+			picture = generic_political_advisor_europe_5
 			
 			allowed = {
 				original_tag = SLO
@@ -15,7 +15,7 @@ ideas = {
 
 		SLO_janko_jesensky = {
 
-			picture = generic_political_advisor_europe_2
+			picture = generic_political_advisor_europe_6
 				
 			allowed = {
 				original_tag = SLO
@@ -65,14 +65,14 @@ ideas = {
 
 		SLO_emil_lendvay = {
 					
-			picture = generic_army_europe_1
+			picture = generic_army_europe_6
 
 			allowed = {
 				original_tag = SLO
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -87,7 +87,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -103,7 +103,7 @@ ideas = {
 			picture = generic_political_advisor_europe_1
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }

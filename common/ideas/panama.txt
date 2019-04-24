@@ -48,7 +48,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 			
 			traits = { military_theorist }
@@ -63,7 +63,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 			
 			traits = { air_warfare_theorist }
@@ -79,7 +79,7 @@ ideas = {
 			}
 			
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 			
 			traits = { naval_theorist }
@@ -105,7 +105,7 @@ ideas = {
 		
 		PAN_bolivar_villarino = {
 
-			picture = generic_army_south_america_3
+			picture = generic_army_south_america_4
 			
 			allowed = {
 				original_tag = PAN
@@ -183,7 +183,7 @@ ideas = {
 
 		PAN_manuel_rios_urribe = {
 
-			picture = generic_army_south_america_2
+			picture = generic_army_south_america_5
 			
 			allowed = {
 				original_tag = PAN
