@@ -150,7 +150,7 @@ ideas = {
 			}
 
 			available = {
-				has_government = neutrality
+				has_government = royalist
 			}
 			
 			modifier = {
