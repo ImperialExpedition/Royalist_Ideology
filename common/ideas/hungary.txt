@@ -59,7 +59,7 @@ ideas = {
 			}
 			
 			modifier = {
-				neutrality_drift = 0.02
+				royalist_drift = 0.02
 			}
 		}
 
@@ -72,7 +72,7 @@ ideas = {
 			}
 			
 			modifier = {
-				neutrality_drift = 0.02
+				royalist_drift = 0.02
 				stability_factor = 0.1
 			}
 		}
@@ -154,7 +154,7 @@ ideas = {
 			}
 			
 			modifier = {
-				neutrality_drift = 0.02
+				royalist_drift = 0.02
 				stability_factor = 0.1
 				political_power_factor = 0.2
 				generate_wargoal_tension = -0.25
@@ -376,7 +376,7 @@ ideas = {
 				}
 			}
 			
-			traits = { staunch_monarchist }
+			traits = { royalist_revolutionary }
 		}
 
 		HUN_kalman_daranyi = {
